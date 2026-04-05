@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-sans: "Open Sans", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --color-primary: #004187;
+    --color-secondary: #005ec4;
+    --color-primary2: #002147;
+    --color-secondary2: #2F72A8;
+}
+
+@layer components {
+  .group:hover > .sub-menu {
+    @apply block;
+  }
+}
+
+@layer utilities {
+  .bg-primary-gradient {
+    background-image: linear-gradient(to right, #004187, #005ec4);
+  }
+}
+
+/* Teks paragraf di widget */
+/* .widget-area p {
+  @apply leading-relaxed text-white dark:text-gray-400;
+} */
+
+/* List archive di widget */
+/* .widget-area ul {
+  @apply leading-7 mb-8;
+} */
+
+.wp-block-heading {
+  @apply font-bold text-gray-800 mb-4;
+}
+
+.footer-paragraph p {
+  @apply leading-loose text-gray-800;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
