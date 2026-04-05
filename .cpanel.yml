@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/utipd/public_html/ppid.uinjambi.ac.id/wp-content/themes/temappiduinjambi
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/rsync -av --delete --exclude=".git" ./ $DEPLOYPATH/
