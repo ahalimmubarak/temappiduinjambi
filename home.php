@@ -280,7 +280,7 @@ get_header();
                             <?php echo get_the_date(); ?>
                         </span>
                         <!-- Excerpt -->
-                        <p class="text-black text-xs/5 md:text-sm leading-relaxed line-clamp-2">
+                        <p class="hidden md:block text-black text-xs/5 md:text-sm leading-relaxed line-clamp-2">
                             <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
                         </p>
                     </div>
@@ -309,7 +309,7 @@ get_header();
             </a>
         </div>
 
-        <?php $posts = uinjambi_get_remote_posts(4); ?>
+        <?php $posts = uinjambi_get_remote_posts(6); ?>
 
         <!-- berita uin jambi -->
         <div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
@@ -319,7 +319,7 @@ get_header();
                         $title   = $item->title->rendered ?? '';
                         $link    = $item->link ?? '#';
                         $date    = !empty($item->date) ? date_i18n('d F Y', strtotime($item->date)) : '';
-                        $excerpt = !empty($item->excerpt->rendered) ? wp_trim_words(strip_tags($item->excerpt->rendered), 18) : '';
+                        $excerpt = !empty($item->excerpt->rendered) ? wp_trim_words(strip_tags($item->excerpt->rendered), 15) : '';
 
                         $fallback_image = function_exists('uinjambi_fallback_image_url')
                             ? uinjambi_fallback_image_url()
