@@ -50,7 +50,7 @@
             </div>
         </header>
 
-        <header id="main-bar" class="bg-primary2">
+        <header id="main-bar" class="relative z-50 bg-primary2">
             <section class="flex items-center justify-between mx-auto px-5 h-20">
                 <div class="flex items-center justify-start space-x-3">
                     <div class="shrink-0 flex">
@@ -115,7 +115,7 @@
                     
                     <!-- Mobile Menu -->
                     <div id="mobile-menu"
-                        class="absolute top-full left-0 w-full hidden xl:hidden bg-white shadow-xl border-t border-gray-200">
+                        class="absolute top-full left-0 z-50 w-full hidden xl:hidden bg-white shadow-xl border-t border-gray-200">
 
                         <?php
                         if ( has_nav_menu( 'primary' ) ) {

@@ -13,20 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle Submenu Mobile
     document.addEventListener("click", function (e) {
 
-        if (e.target.closest(".submenu-toggle")) {
+        const toggle = e.target.closest(".submenu-toggle");
 
-            const button = e.target.closest(".submenu-toggle");
-            const submenu = button.nextElementSibling;
-            const icon = button.querySelector(".submenu-icon");
+        if (toggle) {
+            const submenu = toggle.nextElementSibling;
+            const icon = toggle.querySelector(".submenu-icon");
 
-            if (submenu) {
-                submenu.classList.toggle("hidden");
-            }
-
-            if (icon) {
-                icon.classList.toggle("rotate-180");
-            }
-
+            if (submenu) submenu.classList.toggle("hidden");
+            if (icon) icon.classList.toggle("rotate-180");
         }
 
     });
@@ -69,22 +63,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- Fungsi back to top button ---
-
     const btn = document.getElementById('backToTop');
+    if (btn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        });
 
-    // Tampilkan tombol saat scroll > 300px
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        btn.classList.remove('hidden');
-      } else {
-        btn.classList.add('hidden');
-      }
-    });
-
-    // Klik tombol -> scroll ke atas
-    btn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
 
     // otomatis ambil URL halaman sekarang
@@ -95,6 +87,12 @@ document.addEventListener('DOMContentLoaded', function () {
             link.href = base + url;
         }
     });
+
+
+    // =========================
+    // HERO SLIDER
+    // =========================
+    initSlider('#slider-track', 'prev-hero', 'next-hero');
 
 });
 
@@ -111,8 +109,11 @@ function closeImageModal() {
 }
 
 // jam di header
-
 function updateClock() {
+    const dateEl = document.getElementById("clock-date");
+    const timeEl = document.getElementById("clock-time");
+    if (!dateEl || !timeEl) return;
+
     const now = new Date();
 
     const hari = now.toLocaleDateString("id-ID", {
@@ -126,10 +127,8 @@ function updateClock() {
     const m = String(now.getMinutes()).padStart(2, "0");
     const s = String(now.getSeconds()).padStart(2, "0");
 
-    const jam = `${h}:${m}:${s}`; // pakai titik dua
-
-    document.getElementById("clock-date").textContent = hari;
-    document.getElementById("clock-time").textContent = jam;
+    dateEl.textContent = hari;
+    timeEl.textContent = `${h}:${m}:${s}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -137,12 +136,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateClock, 1000);
 });
 
-// hero slider
-
+// =========================
+// HERO SLIDER
+// =========================
 function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
+
     const track = document.querySelector(trackSelector);
-    track.style.willChange = "transform";
     if (!track) return;
+
+    track.style.willChange = "transform";
 
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
@@ -163,6 +165,7 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
     }
 
     function nextSlide() {
+
         index++;
         track.style.transition = 'transform 0.5s ease';
         updateSlide();
@@ -174,10 +177,13 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
                 updateSlide();
             }, 500);
         }
+
     }
 
     function prevSlide() {
+
         if (index === 0) {
+
             index = totalSlides;
             track.style.transition = 'none';
             updateSlide();
@@ -187,10 +193,12 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
                 index--;
                 updateSlide();
             }, 20);
+
         } else {
             index--;
             updateSlide();
         }
+
     }
 
     function startAutoSlide() {
@@ -201,7 +209,6 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
         clearInterval(interval);
     }
 
-    // tombol
     nextBtn?.addEventListener('click', () => {
         stopAutoSlide();
         nextSlide();
@@ -218,9 +225,5 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
 
     track.addEventListener('mouseenter', stopAutoSlide);
     track.addEventListener('mouseleave', startAutoSlide);
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-    initSlider('#slider-track', 'prev-hero', 'next-hero');        // hero
-    initSlider('#slider-track-info', 'prev-info', 'next-info');   // infografis
-});
+}

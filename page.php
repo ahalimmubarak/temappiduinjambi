@@ -12,7 +12,7 @@ get_header();
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>">
-            <div class="container mx-auto px-5 sm:px-6 lg:px-8 py-8 md:py-12 shadow bg-white">
+            <div class="flex-row mx-auto py-5 px-5 bg-white">
 
                 <!-- Header Halaman -->
                 <header class="mb-8 text-left">

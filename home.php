@@ -12,7 +12,7 @@ get_header();
             <!-- Background Image -->
             <div class="absolute inset-0 
                 bg-[url('https://ppid.uinjambi.ac.id/wp-content/uploads/2026/03/Screenshot-2026-03-02-020056.png')] 
-                bg-cover bg-bottom bg-no-repeat">
+                bg-cover bg-bottom bg-no-repeat bg-white">
             </div>
 
             <!-- <video autoplay muted loop playsinline
@@ -319,7 +319,7 @@ get_header();
                         $title   = $item->title->rendered ?? '';
                         $link    = $item->link ?? '#';
                         $date    = !empty($item->date) ? date_i18n('d F Y', strtotime($item->date)) : '';
-                        $excerpt = !empty($item->excerpt->rendered) ? wp_trim_words(strip_tags($item->excerpt->rendered), 15) : '';
+                        $excerpt = !empty($item->excerpt->rendered) ? wp_trim_words(strip_tags($item->excerpt->rendered), 18) : '';
 
                         $fallback_image = function_exists('uinjambi_fallback_image_url')
                             ? uinjambi_fallback_image_url()
@@ -353,17 +353,17 @@ get_header();
                                 </span>
                                 <?php endif; ?>
 
-                                <h2 class="text-sm/5 md:text-xl font-bold text-gray-800 line-clamp-2">
+                                <h2 class="text-sm/5 md:text-xl font-bold text-black line-clamp-2">
                                     <a href="<?= esc_url($link); ?>" target="_blank" rel="noopener noreferrer" class="hover:underline">
                                         <?= esc_html($title); ?>
                                     </a>
                                 </h2>
 
-                                <span class="text-xs/5 md:text-sm text-gray-500">
+                                <span class="text-xs/5 md:text-sm text-black">
                                     <?= esc_html($date); ?>
                                 </span>
 
-                                <p class="hidden md:block text-gray-600 text-xs/5 md:text-sm line-clamp-2">
+                                <p class="hidden md:block text-black text-xs/5 md:text-sm leading-relaxed line-clamp-2">
                                     <?= esc_html($excerpt); ?>
                                 </p>
                             </div>

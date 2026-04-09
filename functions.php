@@ -255,19 +255,6 @@ function uinjambi_get_remote_posts($limit = 6) {
     return $posts;
 }
 
-// $transient_key = 'uinjambi_latest_posts';
-// $posts = get_transient($transient_key);
-// if (false === $posts) {
-//     $response = wp_remote_get(
-//         'https://uinjambi.ac.id/wp-json/wp/v2/posts?_embed&per_page=4'
-//     );
-//     if (is_wp_error($response)) return;
-//     $body = wp_remote_retrieve_body($response);
-//     $posts = json_decode($body);
-//     // Cache 1 jam
-//     set_transient($transient_key, $posts, HOUR_IN_SECONDS);
-// }
-
 
 /**
  * Get fallback image URL
@@ -294,3 +281,12 @@ function uinjambi_post_thumbnail($size = 'medium', $class = '') {
               alt="' . esc_attr(get_the_title()) . '">';
     }
 }
+
+function clear_uinjambi_cache_manual() {
+    if (isset($_GET['clear_uinjambi_cache'])) {
+        delete_transient('uinjambi_latest_posts_6');
+        delete_transient('uinjambi_latest_posts_4');
+        delete_transient('uinjambi_latest_posts_3');
+    }
+}
+add_action('init', 'clear_uinjambi_cache_manual');
