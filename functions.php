@@ -281,12 +281,3 @@ function uinjambi_post_thumbnail($size = 'medium', $class = '') {
               alt="' . esc_attr(get_the_title()) . '">';
     }
 }
-
-function clear_uinjambi_cache_manual() {
-    if (isset($_GET['clear_uinjambi_cache'])) {
-        delete_transient('uinjambi_latest_posts_6');
-        delete_transient('uinjambi_latest_posts_4');
-        delete_transient('uinjambi_latest_posts_3');
-    }
-}
-add_action('init', 'clear_uinjambi_cache_manual');

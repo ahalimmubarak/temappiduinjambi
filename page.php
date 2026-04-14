@@ -11,14 +11,14 @@ get_header();
 
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
-        <article id="post-<?php the_ID(); ?>">
-            <div class="flex-row mx-auto py-5 px-5 bg-white">
+        <article id="post-<?php the_ID(); ?>" class="bg-white py-5 px-5">
+            <div class="max-w-7xl mx-auto">
 
                 <!-- Header Halaman -->
                 <header class="mb-8 text-left">
 
                     <!-- Judul -->
-                    <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight pl-5 border-l-8 border-l-primary">
+                    <h1 class="text-2xl md:text-3xl/snug font-bold text-gray-900 leading-tight pl-5 border-l-8 border-l-primary">
                         <?php the_title(); ?>
                     </h1>
 

@@ -14,48 +14,48 @@ get_header();
             <div class="flex-row mx-auto py-5 px-5 bg-white">
 
                 <!-- breadcrumb -->
-                <div class="max-w-7xl mx-auto xl:px-5 p-4 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
+                <div class="max-w-7xl mx-auto px-2 py-2 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
                     <?php get_template_part('template-parts/breadcrumb'); ?>
                 </div>
 
-                <div class="max-w-7xl mx-auto xl:px-5 grid grid-cols-1 md:grid-cols-6 gap-8 py-5">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 py-6">
 
                     <main class="md:col-span-4">
 
                         <!-- Judul -->
-                        <h1 class="text-3xl md:text-4xl/tight font-bold text-black mb-5">
+                        <h1 class="text-2xl md:text-3xl/snug font-bold text-black mb-6">
                             <?php the_title(); ?>
                         </h1>
 
                         <!-- Meta -->
-                        <div class="bg-gray-100 border-b border-b-gray-300 mb-5 rounded-xl p-4 text-sm font-medium text-black flex items-center justify-between flex-wrap gap-2">
+                        <div class="mb-6 text-sm font-medium text-black flex items-center justify-between flex-wrap gap-2">
                             <div class="flex items-center justify-start flex-wrap gap-2">
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-1.5">
+                                <span class="flex items-center py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                                     </svg>
                                     <?php echo get_the_category_list(', '); ?>
                                 </span>
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-1.5">
+                                <span class="flex items-center py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                     </svg>
                                     <?php the_author_posts_link(); ?>
                                 </span>
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-1.5">
+                                <span class="flex items-center py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                                     </svg>
                                     <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('l, j F Y'); ?></time>
                                 </span>
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-1.5">
+                                <span class="flex items-center py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                     </svg>
                                     <?php if(function_exists('get_reading_time')) { echo get_reading_time(); } ?>
                                 </span>
-                                <span class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-1.5">
+                                <span class="flex items-center py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                     </svg>
@@ -63,13 +63,13 @@ get_header();
                                 </span>
                             </div>
 
-                            <span class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 mr-2">
+                            <span class="flex items-center justify-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
                                 </svg>
                                 <div class="flex justify-center items-center">
                                     <!-- Facebook -->
-                                    <a data-base="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer" class="share-link rounded-l-xl p-2 bg-blue-600 hover:bg-blue-700 transition">
+                                    <a data-base="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer" class="share-link p-2 bg-blue-600 hover:bg-blue-700 transition">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/>
                                         </svg>
@@ -97,7 +97,7 @@ get_header();
                                     </a>
 
                                     <!-- Print -->
-                                    <button onclick="window.print()" class="rounded-r-xl p-2 bg-gray-400 hover:bg-gray-500 transition">
+                                    <button onclick="window.print()" class="p-2 bg-gray-400 hover:bg-gray-500 transition">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24" viewBox="0 0 24 24">
                                             <path fill="currentColor" d="M20 3v5h-3V5h-1V4H7v4H4V1h14v1h1v1zM1 9v8h3v6h16v-6h3V9zm16 11H7v-4h10zm1-8h2v1h-2z"/>
                                         </svg>
@@ -143,7 +143,7 @@ get_header();
                                 ?>
                                     <div class="flex flex-col lg:flex-row gap-2">
                                         <div class="flex flex-row gap-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 shrink-0 text-black">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 shrink-0 text-black">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
                                             </svg>
@@ -217,13 +217,15 @@ get_header();
                                 <div class="flex items-center justify-between w-full mb-4">
                                     <h2 class="text-lg font-bold text-black">Berita Terbaru</h2>
                                     <a href="<?php echo esc_url($berita_link); ?>" 
-                                        class="flex gap-1 items-center text-sm text-black hover:text-secondary italic hover:underline">Lihat semua
+                                        class="flex gap-1 items-center text-sm text-black hover:text-secondary italic hover:underline">
+                                        Lihat semua
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                         </svg>
                                     </a>
                                 </div>
                             </div>
+
                             <div>
                                 <?php
                                 $recent_posts = new WP_Query(array(
@@ -235,37 +237,48 @@ get_header();
                                 if ($recent_posts->have_posts()) :
                                     echo '<ul class="divide-y divide-gray-300">';
                                     while ($recent_posts->have_posts()) : $recent_posts->the_post();
-                                    ?>
-                                        <li class="flex items-start gap-4 py-2">
-                                            <!-- icon -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 shrink-0 text-black">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                                            </svg>
-                                            <!-- judul dan tanggal -->
-                                            <div class="flex flex-col">
-                                                <div class="text-xs capitalize text-black tracking-wide mb-1">
-                                                    <?php echo strip_tags(get_the_category_list(', ')); ?>
+                                ?>
+                                    <li class="flex items-start gap-4 py-3">
+                                        <!-- thumbnail -->
+                                        <a href="<?php the_permalink(); ?>" class="shrink-0 w-24 h-20 overflow-hidden rounded-md bg-gray-100">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <?php the_post_thumbnail('medium', array(
+                                                    'class' => 'w-full h-full object-cover',
+                                                    'alt'   => get_the_title()
+                                                )); ?>
+                                            <?php else : ?>
+                                                <div class="w-full h-full flex items-center justify-center text-[10px] text-gray-400">
+                                                    no image
                                                 </div>
-                                                <a href="<?php the_permalink(); ?>" class="line-clamp-2 text-base leading-normal font-semibold text-black hover:text-secondary hover:underline"><?php the_title(); ?></a>
-                                                <span class="text-sm mt-2 text-black"><?php echo get_the_date('l, j F Y'); ?></span>
+                                            <?php endif; ?>
+                                        </a>
+
+                                        <!-- judul dan tanggal -->
+                                        <div class="flex flex-col flex-1 min-w-0">
+                                            <div class="text-xs capitalize text-black tracking-wide mb-1">
+                                                <?php echo strip_tags(get_the_category_list(', ')); ?>
                                             </div>
-                                        </li>
-                                    <?php
+                                            <a href="<?php the_permalink(); ?>" class="line-clamp-2 text-base leading-normal font-semibold text-black hover:text-secondary hover:underline">
+                                                <?php the_title(); ?>
+                                            </a>
+                                            <span class="text-sm mt-2 text-black">
+                                                <?php echo get_the_date('l, j F Y'); ?>
+                                            </span>
+                                        </div>
+                                    </li>
+                                <?php
                                     endwhile;
                                     echo '</ul>';
                                 endif;
 
                                 wp_reset_postdata();
                                 ?>
-
                             </div>
-
                         </div>
                     </aside>
 
                 </div>
             </div>
-
         </article>
 
     <?php endwhile; ?>
