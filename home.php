@@ -26,7 +26,7 @@ get_header();
 
             <div class="relative z-10 mx-auto flex items-center justify-between h-[50vh] md:h-[70vh] px-5">
                 <div class="flex flex-col items-center text-center">
-                    <h1 class="sm:text-5xl text-3xl mb-4 font-bold leading-tight text-black font-poppins">Selamat Datang di
+                    <h1 class="sm:text-5xl text-3xl mb-4 font-extrabold leading-tight text-black">Selamat Datang di
                         <br><span class="tracking-tight text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-300">Portal PPID UIN Jambi</span>
                     </h1>
                     <p class="mb-8 text-black font-medium text-sm md:text-base xl:px-80">Layanan ini merupakan sarana layanan bagi pemohon
@@ -64,7 +64,7 @@ get_header();
 
             <div class="relative z-10 mx-auto flex items-center justify-between h-[50vh] md:h-[70vh] px-5">
                 <div class="flex flex-col items-center text-center">
-                    <h1 class="sm:text-5xl text-3xl mb-4 font-bold leading-tight text-black font-poppins">
+                    <h1 class="sm:text-5xl text-3xl mb-4 font-extrabold leading-tight text-black">
                         Maklumat Pelayanan
                         <br><span class="tracking-tight text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-300">Informasi Publik</span>
                     </h1>

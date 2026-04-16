@@ -8,12 +8,12 @@ get_header();
 <div class="flex-row mx-auto p-5 shadow bg-white">
 
     <!-- breadcrumb -->
-    <div class="p-4 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
+    <div class="max-w-7xl mx-auto px-2 py-2 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
         <?php get_template_part('template-parts/breadcrumb-archive'); ?>
     </div>
 
     <!-- Header Arsip -->
-    <header class="border-b border-gray-300 mb-10 py-5">
+    <header class="max-w-7xl mx-auto border-b border-gray-300 mb-10 py-5">
         <?php
             the_archive_title('<h1 class="text-3xl font-semibold text-black">', '</h1>');
             the_archive_description('<div class="mt-2 text-black text-base">', '</div>');
@@ -22,7 +22,7 @@ get_header();
 
     <!-- content -->
     <?php if (have_posts()) : ?>
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8">
 
             <!-- semua archive -->
             <div class="md:col-span-4 space-y-4">
@@ -33,11 +33,11 @@ get_header();
                         <div class="w-32 shrink-0">
                             <a href="<?php the_permalink(); ?>">
                                 <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium', ['class' => 'w-32 h-24 object-cover rounded-xl']); ?>
+                                    <?php the_post_thumbnail('medium', ['class' => 'w-32 h-24 object-cover rounded-xl']); ?>
                                 <?php else : ?>
-                                <div class="w-32 h-24 shrink-0">
-                                    <?php uinjambi_post_thumbnail('medium', 'object-cover rounded-xl'); ?>
-                                </div>
+                                    <div class="w-32 h-24 shrink-0">
+                                        <?php uinjambi_post_thumbnail('medium', 'object-cover rounded-xl'); ?>
+                                    </div>
                                 <?php endif; ?>
                             </a>
                         </div>
@@ -46,7 +46,7 @@ get_header();
                         <div class="grow">
 
                             <!-- Kategori -->
-                            <div class="text-xs capitalize text-black tracking-wide mb-1">
+                            <div class="inline text-xs capitalize text-black tracking-wide mb-2 py-1 px-2 bg-gray-100 border-b border-b-gray-300 rounded-full">
                                 <?php echo strip_tags(get_the_category_list(', ')); ?>
                             </div>
 
@@ -125,7 +125,7 @@ get_header();
             </div>
         </div>
     <?php else : ?>
-        <div class="text-center py-10">
+        <div class="max-w-7xl mx-auto text-center py-10">
             <h2 class="text-xl font-bold text-black">Tidak ada artikel ditemukan</h2>
             <p class="text-black mt-2">Silakan cek kembali kategori atau tanggal yang dipilih.</p>
         </div>

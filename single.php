@@ -247,8 +247,8 @@ get_header();
                                                     'alt'   => get_the_title()
                                                 )); ?>
                                             <?php else : ?>
-                                                <div class="w-full h-full flex items-center justify-center text-[10px] text-gray-400">
-                                                    no image
+                                                <div class="w-32 h-24 shrink-0">
+                                                    <?php uinjambi_post_thumbnail('medium', 'object-cover rounded-xl'); ?>
                                                 </div>
                                             <?php endif; ?>
                                         </a>
