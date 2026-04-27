@@ -14,11 +14,13 @@ get_header();
             <div class="flex-row mx-auto py-5 px-5 bg-white">
 
                 <!-- breadcrumb -->
-                <div class="max-w-7xl mx-auto px-2 py-2 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
-                    <?php get_template_part('template-parts/breadcrumb'); ?>
+                <div class="max-w-7xl mx-auto sm:px-5">
+                    <div class="p-2 text-sm font-medium bg-gray-100 border-b border-b-gray-300 rounded-xl">
+                        <?php get_template_part('template-parts/breadcrumb'); ?>
+                    </div>
                 </div>
 
-                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 py-6">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 py-6 sm:px-5">
 
                     <main class="md:col-span-4">
 

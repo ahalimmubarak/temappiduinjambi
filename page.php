@@ -12,7 +12,7 @@ get_header();
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" class="bg-white py-5 px-5">
-            <div class="max-w-7xl mx-auto">
+            <div class="max-w-7xl mx-auto sm:px-5">
 
                 <!-- Header Halaman -->
                 <header class="mb-8 text-left">
@@ -32,7 +32,7 @@ get_header();
                 <?php endif; ?> -->
 
                 <!-- Konten Halaman -->
-                <div class="max-w-none mx-auto text-gray-900 prose font-open-sans">
+                <div class="max-w-none mx-auto text-gray-900 prose">
                     <?php the_content(); ?>
                 </div>
 

@@ -115,7 +115,7 @@ get_header();
             </h2>
             <a href="https://ppid.uinjambi.ac.id/permohonan-informasi-publik/"
                 class="mt-2 text-xs md:text-base text-white inline-flex gap-2 items-center cursor-pointer
-                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-xl
+                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-lg md:rounded-xl
 
                 md:absolute md:bottom-6
                 md:translate-y-22
@@ -144,7 +144,7 @@ get_header();
             </h2>
             <a href="https://ppid.uinjambi.ac.id/pengajuan-keberatan-informasi-publik/"
                 class="mt-2 text-xs md:text-base text-white inline-flex gap-2 items-center cursor-pointer
-                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-xl
+                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-lg md:rounded-xl
 
                 md:absolute md:bottom-6
                 md:translate-y-22
@@ -173,7 +173,7 @@ get_header();
             </h2>
             <a href="https://ppid.uinjambi.ac.id/pengaduan-masyarakat/"
                 class="mt-2 text-xs md:text-base text-white inline-flex gap-2 items-center cursor-pointer
-                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-xl
+                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-lg md:rounded-xl
 
                 md:absolute md:bottom-6
                 md:translate-y-22
@@ -200,7 +200,7 @@ get_header();
             </h2>
             <a href="https://ppid.uinjambi.ac.id/survei-kepuasan-masyarakat/"
                 class="mt-2 text-xs md:text-base text-white inline-flex gap-2 items-center cursor-pointer
-                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-xl
+                bg-primary2 border-2 border-primary2 py-2 px-3 md:py-4 md:px-6 rounded-lg md:rounded-xl
 
                 md:absolute md:bottom-6
                 md:translate-y-22

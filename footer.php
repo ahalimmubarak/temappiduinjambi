@@ -1,9 +1,9 @@
     </main>
 
     <footer class="bg-blue-50 border-t border-t-gray-300">
-        <div class="flex px-5 py-12">     
+        <div class="flex max-w-7xl mx-auto px-5 py-12">     
             <!-- Area Widget Footer -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            <div class="sm:px-5 2xl:px-0 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
                 
                 <!-- Widget Kolom 1 -->
                 <div class="widget-area text-gray-800">
@@ -70,7 +70,7 @@
     <section class="bg-blue-100 border-t border-t-gray-300 py-4">
 
         <!-- Copyright Bar -->
-        <div class="text-center text-xs leading-6 px-5 text-gray-800">
+        <div class="max-w-7xl mx-auto text-center text-xs leading-6 px-5 text-gray-800">
             <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved. UTIPD 2026.</p>
         </div>
 

@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="max-w-360 mx-auto bg-gray-800">
+<body class="max-w-360 mx-auto bg-gray-700">
     <?php wp_body_open(); ?>
 
     <div id="search-overlay" class="fixed inset-0 z-100 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
@@ -19,7 +19,7 @@
         </button>
     </div>
 
-    <section class="flex-row">
+    <section>
         <!-- top bar -->
         <header class="hidden lg:flex bg-gray-950 py-2 px-5 justify-between items-center">
             <!-- <div class="flex items-center gap-2">
@@ -50,7 +50,7 @@
             </div>
         </header>
 
-        <header id="main-bar" class="relative z-50 bg-primary2">
+        <header id="main-bar" class="sticky top-0 z-9999 shadow-md bg-primary2">
             <section class="flex items-center justify-between mx-auto px-5 h-20">
                 <div class="flex items-center justify-start space-x-3">
                     <div class="shrink-0 flex">
@@ -98,7 +98,7 @@
                         </div>
 
                         <!-- Tombol Menu Mobile -->
-                        <button id="menu-toggle" aria-label="Buka Menu" class="xl:hidden py-4 pl-4 relative z-50 text-white/70 hover:text-white transition-colors">
+                        <button id="menu-toggle" aria-label="Buka Menu" class="xl:hidden py-4 pl-4 relative z-50 text-white hover:text-white/70 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
