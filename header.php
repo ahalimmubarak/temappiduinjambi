@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="max-w-360 mx-auto bg-gray-700">
+<body class="w-full mx-auto">
     <?php wp_body_open(); ?>
 
     <div id="search-overlay" class="fixed inset-0 z-100 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
@@ -19,7 +19,7 @@
         </button>
     </div>
 
-    <section>
+    <section class="flex-row">
         <!-- top bar -->
         <header class="hidden lg:flex bg-gray-950 py-2 px-5 justify-between items-center">
             <!-- <div class="flex items-center gap-2">
@@ -50,13 +50,14 @@
             </div>
         </header>
 
-        <header id="main-bar" class="sticky top-0 z-9999 shadow-md bg-primary2">
+        <header id="main-bar" class="relative z-60 bg-primary2">
             <section class="flex items-center justify-between mx-auto px-5 h-20">
                 <div class="flex items-center justify-start space-x-3">
                     <div class="shrink-0 flex">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <img src="<?php echo esc_url( wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' ) ); ?>" 
                             alt="<?php bloginfo('name'); ?>"
+                            id="site-logo"
                             class="h-10 lg:h-13 w-auto max-h-25">
                         </a>
                     </div>
@@ -71,7 +72,7 @@
                         </p>
 
                         <?php if ( get_theme_mod( 'second_tagline' ) ) : ?>
-                            <p class="text-[0.50rem] md:text-xs font-medium uppercase text-white">
+                            <p class="text-[0.50rem] md:text-xs font-medium text-white">
                                 <?php echo esc_html( get_theme_mod( 'second_tagline' ) ); ?>
                             </p>
                         <?php endif; ?>
@@ -133,6 +134,9 @@
                 </div>
             </section>
         </header>
+
+        <div id="secondary-bar" class="fixed top-0 left-0 w-full z-50 opacity-0 -translate-y-5 transition-all duration-300 ease-out"></div>
+
     </section>
 
     <!-- Memberi jarak agar konten tidak tertutup header fixed -->

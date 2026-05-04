@@ -227,3 +227,89 @@ function initSlider(trackSelector, prevBtnId, nextBtnId, speed = 8000) {
     track.addEventListener('mouseleave', startAutoSlide);
 
 }
+
+
+// secondary-bar nav menu
+document.addEventListener("DOMContentLoaded", function () {
+    const mainBar = document.getElementById("main-bar");
+    const secondaryBar = document.getElementById("secondary-bar");
+
+     if (!mainBar || !secondaryBar) return;
+     if (secondaryBar.children.length > 0) return;
+
+    // clone main-bar
+    const clone = mainBar.cloneNode(true);
+    clone.classList.add(
+        "bg-primary2",
+        "h-16",
+        "transition-all",
+        "duration-300",
+        "ease-out"
+    );
+    clone.removeAttribute("id");
+
+    // SHRINK bagian dalam
+    const inner = clone.querySelector("section");
+    if (inner) {
+        inner.classList.remove("h-20");
+        inner.classList.add("h-16");
+    }
+
+    // LOGO SHRINK
+    const logo = clone.querySelector("#site-logo");
+    if (logo) {
+        logo.classList.remove("h-10", "lg:h-13");
+        logo.classList.add("h-8", "lg:h-10");
+    }
+
+    secondaryBar.appendChild(clone);
+
+    // SCROLL ANIMATION
+    window.addEventListener("scroll", function () {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > 100) {
+            // tampil (fade + slide turun)
+            secondaryBar.classList.remove("opacity-0", "-translate-y-5");
+            secondaryBar.classList.add("opacity-100", "translate-y-0");
+        } else {
+            // hilang (fade + slide naik)
+            secondaryBar.classList.add("opacity-0", "-translate-y-5");
+            secondaryBar.classList.remove("opacity-100", "translate-y-0");
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const submenus = document.querySelectorAll('.submenu-flyout');
+
+    submenus.forEach(menu => {
+        const parent = menu.parentElement;
+
+        parent.addEventListener('mouseenter', () => {
+
+            const isSub = parent.classList.contains('group/sub');
+
+            menu.classList.remove('left-full', 'right-full');
+
+            requestAnimationFrame(() => {
+
+                if (isSub) {
+                    menu.classList.add('left-full');
+
+                    const rect = menu.getBoundingClientRect();
+
+                    if (rect.right > window.innerWidth) {
+                        menu.classList.remove('left-full');
+                        menu.classList.add('right-full');
+                    }
+
+                } else {
+                    menu.classList.add('left-0', 'top-full');
+                }
+
+            });
+
+        });
+    });
+});

@@ -238,10 +238,12 @@ get_header();
         </div>
 
         <?php
-        $news_query = new WP_Query([
-        'post_type'      => 'post',
-        'posts_per_page' => 6,
-        ]);
+            $news_query = new WP_Query([
+            'post_type'      => 'post',
+            'posts_per_page' => 6,
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+            ]);
         ?>
 
         <!-- berita -->

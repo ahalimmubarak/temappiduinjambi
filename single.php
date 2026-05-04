@@ -233,7 +233,8 @@ get_header();
                                 $recent_posts = new WP_Query(array(
                                     'posts_per_page' => 5,
                                     'orderby'        => 'date',
-                                    'order'          => 'DESC'
+                                    'order'          => 'DESC',
+                                    'category_name'  => 'berita',
                                 ));
 
                                 if ($recent_posts->have_posts()) :
