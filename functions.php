@@ -43,6 +43,7 @@ function my_news_theme_enqueue_assets() {
         '1.0.0',
         true // Memuat di footer
     );
+
 }
 add_action( 'wp_enqueue_scripts', 'my_news_theme_enqueue_assets' );
 
@@ -277,7 +278,7 @@ function uinjambi_post_thumbnail($size = 'medium', $class = '') {
     } else {
 
         echo '<img src="' . esc_url(uinjambi_fallback_image_url()) . '" 
-              class="' . esc_attr($class) . '" 
-              alt="' . esc_attr(get_the_title()) . '">';
+            class="' . esc_attr($class) . '" 
+            alt="' . esc_attr(get_the_title()) . '">';
     }
 }

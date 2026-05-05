@@ -313,3 +313,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+const tabs = document.querySelectorAll('[data-tab]');
+const contents = document.querySelectorAll('#tab-contents > div');
+
+contents.forEach(c => c.classList.add('hidden'));
+document.getElementById('tab-1').classList.remove('hidden');
+
+tabs[0].querySelector('span:last-child').classList.remove('bg-transparent');
+tabs[0].querySelector('span:last-child').classList.add('bg-indigo-500');
+tabs[0].classList.add('text-gray-900');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = this.dataset.tab;
+
+        contents.forEach(c => c.classList.add('hidden'));
+        document.getElementById(target).classList.remove('hidden');
+
+        tabs.forEach(t => {
+            t.classList.remove('text-gray-900');
+
+            const indicator = t.querySelector('span:last-child');
+            indicator.classList.remove('bg-indigo-500');
+            indicator.classList.add('bg-transparent');
+        });
+
+        this.classList.add('text-gray-900');
+
+        const activeIndicator = this.querySelector('span:last-child');
+        activeIndicator.classList.remove('bg-transparent');
+        activeIndicator.classList.add('bg-indigo-500');
+    });
+});
+
+const mobileTabs = document.getElementById('mobile-tabs');
+
+mobileTabs.addEventListener('change', function () {
+    const target = this.value;
+
+    contents.forEach(c => c.classList.add('hidden'));
+    document.getElementById(target).classList.remove('hidden');
+});

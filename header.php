@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="w-full mx-auto">
+<body class="w-full mx-auto scroll-smooth">
     <?php wp_body_open(); ?>
 
     <div id="search-overlay" class="fixed inset-0 z-100 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
