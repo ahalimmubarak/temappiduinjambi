@@ -16,19 +16,17 @@
     <div class="hidden sm:block">
         <nav class="isolate flex divide-x divide-gray-200 rounded-lg shadow-sm" aria-label="Tabs">
             <!-- Current: "text-gray-900", Default: "text-gray-500 hover:text-gray-700" -->
-            <a href="#" data-tab="tab-1"
-                class="group relative min-w-0 flex-1 overflow-hidden rounded-l-lg bg-white px-4 py-4 text-center font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-700 focus:z-10">
+            <a href="#" data-tab="tab-1" class="group relative min-w-0 flex-1 overflow-hidden bg-white px-4 py-4 text-center text-xl font-bold text-gray-600 hover:bg-gray-50 hover:text-gray-700 focus:z-10">
                 <span>Jalur Nasional
                     <p class="inline-flex items-center rounded-md bg-indigo-100 px-2 py-1 text-xs font-medium text-indigo-700 ml-2">Ada (UMPTKIN)</p>
                 </span>
-                <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-0.5 bg-transparent"></span>
+                <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1 bg-transparent"></span>
             </a>
-            <a href="#" data-tab="tab-2"
-                class="group relative min-w-0 flex-1 overflow-hidden bg-white px-4 py-4 text-center font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-700 focus:z-10">
+            <a href="#" data-tab="tab-2" class="group relative min-w-0 flex-1 overflow-hidden bg-white px-4 py-4 text-center text-xl font-bold text-gray-600 hover:bg-gray-50 hover:text-gray-700 focus:z-10">
                 <span>Jalur Universitas
                     <p class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-green-700">Ada</p>
                 </span>
-                <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-0.5 bg-transparent"></span>
+                <span aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1 bg-transparent"></span>
             </a>
         </nav>
     </div>

@@ -317,12 +317,21 @@ document.addEventListener('DOMContentLoaded', function () {
 const tabs = document.querySelectorAll('[data-tab]');
 const contents = document.querySelectorAll('#tab-contents > div');
 
-contents.forEach(c => c.classList.add('hidden'));
-document.getElementById('tab-1').classList.remove('hidden');
+if (tabs.length > 0 && contents.length > 0) {
 
-tabs[0].querySelector('span:last-child').classList.remove('bg-transparent');
-tabs[0].querySelector('span:last-child').classList.add('bg-indigo-500');
-tabs[0].classList.add('text-gray-900');
+    contents.forEach(c => c.classList.add('hidden'));
+
+    document.getElementById('tab-1')?.classList.remove('hidden');
+
+    tabs[0]?.querySelector('span:last-child')
+        ?.classList.remove('bg-transparent');
+
+    tabs[0]?.querySelector('span:last-child')
+        ?.classList.add('bg-indigo-500');
+
+    tabs[0]?.classList.add('text-gray-900');
+
+}
 
 tabs.forEach(tab => {
     tab.addEventListener('click', function(e) {
@@ -356,4 +365,36 @@ mobileTabs.addEventListener('change', function () {
 
     contents.forEach(c => c.classList.add('hidden'));
     document.getElementById(target).classList.remove('hidden');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const track = document.querySelector('.marquee-track');
+
+    if (!track) return;
+
+    const originalItems = [...track.children];
+
+    // clone semua item 2x
+    originalItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const closeBtn = document.getElementById('closeBanner');
+    const banner = document.getElementById('banner');
+
+    if (closeBtn && banner) {
+
+        closeBtn.addEventListener('click', () => {
+            banner.style.display = 'none';
+        });
+
+    }
+
 });

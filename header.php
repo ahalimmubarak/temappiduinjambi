@@ -133,6 +133,7 @@
                     </div>
                 </div>
             </section>
+            <?php get_template_part('template-parts/home/utipd/notif'); ?>
         </header>
 
         <div id="secondary-bar" class="fixed top-0 left-0 w-full z-50 opacity-0 -translate-y-5 transition-all duration-300 ease-out"></div>

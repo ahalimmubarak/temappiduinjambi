@@ -29,13 +29,11 @@ add_action( 'after_setup_theme', 'my_news_theme_setup' );
  * Fungsi untuk memuat file CSS dan JavaScript.
  */
 function my_news_theme_enqueue_assets() {
-    // Memuat file CSS utama (hasil build dari Tailwind)
     wp_enqueue_style( 
         'my-news-theme-style', 
         get_template_directory_uri() . '/src/output.css' 
     );
 
-    // Memuat file JavaScript utama
     wp_enqueue_script( 
         'my-news-theme-main-js', 
         get_template_directory_uri() . '/assets/js/main.js',
